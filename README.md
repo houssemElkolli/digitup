@@ -10,12 +10,19 @@
 ## Start the aplication
 
 Run "composer install" on your cmd or terminal
+
 Run "php artisan migrate"
+
 Run "php artisan db:seed" to create an user with role : "admin"
 
+
+
   Run php artisan serve
+
   Go to http://localhost:8000/
+
 or
+
   Run "php artisan test" for the tests
 ## About Laravel
 
