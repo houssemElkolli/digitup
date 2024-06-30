@@ -22,7 +22,7 @@ class EnsureUserIsOwnerOfTaskOrHasRole
 
         $task = Task::withTrashed()->find($taskId);
 
-        if (is_null($task) || ($task->trashed() && Auth::user()->hasRole("user"))) {
+        if (is_null($task) || ($task->trashed() && !Auth::user()->hasRole($role))) {
             return response()->json(["message" => "not found"], 404);
         }
 
